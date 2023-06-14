@@ -1,0 +1,6 @@
+{
+  "expected_success": "Products",
+  "expected_fail_invalid_creds": "Epic sadface: Username and password do not match any user in this service",
+  "expected_fail_blank_creds": "Epic sadface: Username is required"
+}
+

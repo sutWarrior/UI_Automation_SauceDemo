@@ -12,7 +12,7 @@ class LoginPage{
         cy.get(this.tf_password).type(password)
     }
 
-    clickSubmit(){
+    clickLogin(){
         cy.get(this.btn_login).click()
     }
 }

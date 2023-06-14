@@ -9,6 +9,10 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on); //for html reports
     },
     //setting up the base URL of  application
-    baseUrl: 'https://www.saucedemo.com'
+    baseUrl: 'https://www.saucedemo.com',
+    env: {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    }
   },
 });

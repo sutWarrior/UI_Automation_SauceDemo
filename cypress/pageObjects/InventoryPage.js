@@ -1,20 +1,17 @@
 class InventoryPage{
 
-    lbl_inventory_item_name='#user-name'
-    tf_password='#password'
-    btn_login='#login-button'
+    btn_add_to_cart_of_item='#add-to-cart-sauce-labs-backpack'
+    // btn_add_to_cart_of_item='button[id^="add-to-cart"]:first-of-type'
+    lbl_cart_item_actual_count='.shopping_cart_link span'
 
-    setUserName(username){
-        cy.get(this.tf_username).type(username)
+    clickAddToCartItem(){
+        cy.get(this.btn_add_to_cart_of_item).click()
     }
 
-    setPassword(password){
-        cy.get(this.tf_password).type(password)
+    verifyCartItemCount(expectedItemCount){
+        cy.get(this.lbl_cart_item_actual_count).should('have.text',expectedItemCount)
     }
 
-    clickSubmit(){
-        cy.get(this.btn_login).click()
-    }
 }
 
-export default LoginPage;
+export default InventoryPage;

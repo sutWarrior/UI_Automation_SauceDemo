@@ -24,8 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import LoginPage from "../pageObjects/LoginPage"
+import InventoryPage from "../pageObjects/InventoryPage"
 
-const login=new LoginPage();
+
+const loginPage=new LoginPage();
+const inventoryPage=new InventoryPage();
 
 //custom comand for clicking on link using label
 Cypress.Commands.add('clickLink',(label)=>{
@@ -34,7 +37,12 @@ Cypress.Commands.add('clickLink',(label)=>{
 
 //custom command for login
 Cypress.Commands.add('login',(username,password) =>{
-    login.setUserName(username)
-    login.setPassword(password)
-    login.clickSubmit()   
+    loginPage.setUserName(username)
+    loginPage.setPassword(password)
+    loginPage.clickLogin()   
+})
+
+//custom command for verify item count on shopping cart
+Cypress.Commands.add('verifyCartItemCount',(expectedItemCount) =>{
+    inventoryPage.verifyCartItemCount(expectedItemCount) 
 })
