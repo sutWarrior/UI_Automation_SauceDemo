@@ -1,0 +1,17 @@
+{
+  "name": "ui_automation_saucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suranji",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.14.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.5.0"
+  }
+}
