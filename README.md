@@ -37,4 +37,10 @@ data used in tests are  are located in cypress/fixtures folder (.json files)
 
 pageobjects are located in cypress/pageObjects folder [only difference from cypress default project structure] -  using page object model(POM) design pattern and keeping selectors separately
 
+generated report after execution available in cypress/reports
+
+screenshots on failure is in cypress/screenshots
+
+generated videos after execution is in cypress/videos
+
 cypress.config.js - Main config file where default behavior of Cypress can be modified
